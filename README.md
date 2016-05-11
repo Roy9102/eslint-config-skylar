@@ -1,12 +1,5 @@
-eslint-config-skylar
-```.eslintrc.json
-{
-  "extends": "skylar",
-}
-```
-
 # eslint-config-skylar
-This package provides ES6 and React styleguide;
+这是一份方便项目组中多人协作时约定代码规范的配置；
 
 ## Why
 
