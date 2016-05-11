@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-skylar",
+  "version": "1.0.0",
+  "description": "skylar FE Style",
+  "keywords": [
+    "style guide",
+    "lint",
+    "skylar",
+    "es6",
+    "es2015",
+    "react",
+    "jsx"
+  ],
+  "author": "Roychen",
+  "repository": {
+    "type": "git",
+    "url": "git https://github.com/Roy9102/eslint-config-skylar.git"
+  },
+  "devDependencies":{
+  	"eslint-plugin-react":"*"
+  }
+}
