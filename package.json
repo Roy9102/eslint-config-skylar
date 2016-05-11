@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git https://github.com/Roy9102/eslint-config-skylar.git"
   },
-  "devDependencies":{
+  "dependencies":{
   	"eslint-plugin-react":"*"
   }
 }
