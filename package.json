@@ -14,7 +14,7 @@
   "author": "Roychen",
   "repository": {
     "type": "git",
-    "url": "git https://github.com/Roy9102/eslint-config-skylar.git"
+    "url": "git+https://github.com/Roy9102/eslint-config-skylar.git"
   },
   "dependencies":{
   	"eslint-plugin-react":"*"
