@@ -13,12 +13,14 @@ module.exports = {
 		// jsx 属性的花括号左右两则可以存在空格，也可以都不要，支持多行属性
 		"react/jsx-curly-spacing": [2, "never", { "allowMultiline": true }],
 		// 约定jsx事件句柄的key的规范和回调函数的命名规范  eg. onChange = { this.handleChange }
-		"react/jsx-handler-names": [0, {
+		"react/jsx-handler-names": [1, {
 		  "eventHandlerPrefix": "handle",	// 回调函数必须以handle开头    eg. handleChange
 		  "eventHandlerPropPrefix": "on",   // 事件名称属性必须以on开头 eg. onChange
 		}],
-		// 规定jsx的属性缩进必须是tab
-		"react/jsx-indent-props": [2, "tab"],
+		// 规定JSX标签的缩进方式，必须是四个空格
+		"react/jsx-indent": [2, 4],
+		// 规定jsx的属性缩进必须是四个空格
+		"react/jsx-indent-props": [2, 4],
 		// 在数组遍历渲染过程中要求必须有key属性，提高react渲染性能
 		"react/jsx-key": 2,
 		// 规定每行只能最多只能有两个属性
@@ -45,7 +47,7 @@ module.exports = {
 		  "requiredFirst":false,
 		}],
 		// 属性必须要在propTypes中进行类型声明
-		"react/prop-types": [2, { "ignore": [], "customValidators": [] }],
+		"react/prop-types": [1, { "ignore": [], "customValidators": [] }],
 		// 属性按字母表排序
 		"react/jsx-sort-props": [0, {
 		  "ignoreCase": false,
@@ -64,7 +66,7 @@ module.exports = {
 		"react/no-did-mount-set-state": [2, "allow-in-func"],
 		"react/no-did-update-set-state": [2, "allow-in-func"],
 		// 禁止直接对this.state进行赋值，只能通过setState
-		"react/no-direct-mutation-state": 2,
+		"react/no-direct-mutation-state": 1,
 		// 禁止使用isMounted方法，即将被官方抛弃
 		"react/no-is-mounted": 2,
 		// 一个文件只能是一个组件，除非是那些无状态组件
@@ -90,31 +92,21 @@ module.exports = {
 		// 强制render方法一定必须return元素
 		"react/require-render-return": 2,
 		// 自闭合标签无需要再使用额外的closing Tag
-		"react/self-closing-comp": 2,
+		"react/self-closing-comp": 2, 
 		// 强制在自闭合标签关闭之前留有空格或者换行符
-		"react/jsx-space-before-closing": [2, "always"],
+		"react/jsx-space-before-closing": [0, "always"],
 		// 给component的内部方法进行排序,order标明顺序，group代表每个order项里面的排序
 		"react/sort-comp": [2, {
 		  "order": [
 		    "static-methods",
 		    "lifecycle",
-		    "/^on.+$/",
+		    "/^handle.+$/",
 		    "everything-else",
 		    "renderMethod"
 		  ],
 		  "groups":{
 		  	"liefcycle":[
-				'displayName',
-				'propTypes',
-				'contextTypes',
-				'childContextTypes',
-				'mixins',
-				'statics',
-				'defaultProps',
 				'constructor',
-				'getDefaultProps',
-				'getInitialState',
-				'state',
 				'getChildContext',
 				'componentWillMount',
 				'componentDidMount',
@@ -140,8 +132,6 @@ module.exports = {
 		"react/jsx-first-prop-new-line": [2, "multiline"],
 		// 强制等号两边必须有空格
 		"react/jsx-equals-spacing": [2, "always"],
-		// 规定JSX标签的缩进方式，必须是tab缩进
-		"react/jsx-indent": [2, "tab"],
 		// 禁止在A标签中使用target="_blank",使用时必须加上 rel="noopener noreferrer"
 		"react/jsx-no-target-blank": 2
 	},

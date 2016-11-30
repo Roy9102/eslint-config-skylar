@@ -1,8 +1,8 @@
 /*
 * @Author: Roy
 * @Date:   2016-05-09 19:44:57
-* @Last Modified by:   Roy
-* @Last Modified time: 2016-05-11 16:05:19
+* @Last Modified by:   RoyChen
+* @Last Modified time: 2016-11-30 12:19:45
 *
 * ESlint 代码格式规范
 */
@@ -17,17 +17,17 @@ module.exports = {
         // 强制在逗号后使用空格
         "comma-spacing":[1, {"before": false, "after": true}],
         // 约束标识符长度
-        "id-length": [1, {"min": 1, "max": 16, "properties": "always", "exceptions": []}],
+        "id-length": [1, {"min": 1, "max": 32, "properties": "always", "exceptions": []}],
         // 标识符黑名单
-        "id-blacklist":[2, "this", "top", "window", "class", "super", "event" ],
+        "id-blacklist":[1, "this", "top", "window", "class", "super", "event" ],
         // 缩进为4个空格，开启switchCase缩进，大小是4个空格
-        "indent":[1, "tab", {"SwitchCase":1}],
+        "indent":[1, 4, {"SwitchCase":1}],
         // jsx属性使用双引号
         "jsx-quotes":[1, "prefer-double"],
         // 代码行最大长度，忽略注释和url，同时一个tab算4个字符
         "max-len":[1, {"code":120, "tabWidth":4, "ignoreComments":true, "ignoreUrls":true}],
         // 最大的嵌套层数
-        "max-depth":[1,{"max":5}],
+        "max-depth":[1,{"max":3}],
         // 构造函数的首字母大写，或者new操作符之后的函数首字母大写
         "new-cap":1,
         // 调用无参数构造函数时，不允许省略构造函数
@@ -43,7 +43,7 @@ module.exports = {
         // 不允许使用嵌套的三元表达式
         "no-nested-ternary":1,
         // 在有else的时候，不允许使用否定的条件语句，这样逻辑太难理解
-        "no-negated-condition":1,
+        "no-negated-condition":0,
         // 不允许函数调用时，函数名和括号之间有空格
         "no-spaced-func":1,
         // 该规则只对点操作符和方括号之间的空格有效，换行符不会有警告产生
@@ -55,7 +55,8 @@ module.exports = {
         // 注释后必须有一个或多个空格 // 或者 /*
         "spaced-comment": 1,
         // 正则要用括号包起来，避免看起来像除法运算符
-        "wrap-regex":1,
+        "wrap-regex":1,  
+
     }
 
 

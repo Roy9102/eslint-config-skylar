@@ -30,40 +30,40 @@ module.exports = {
         // 将声明在块级作用域的var变量看成块级变量，防止在块作用域之外调用
         "block-scoped-var":1,
         // 禁止in操作符的否定的左操作数
-        "no-negated-in-lhs": 2,
+        // "no-negated-in-lhs": 2,
         // 禁止不规则的空格
         "no-irregular-whitespace":2,
         // 禁止全局对象的函数调用，
-        "no-obj-calls":2,
+        // "no-obj-calls":2,
         // 禁止正则表达式中的空格 
         "no-regex-spaces":2,
         // 禁止使用稀疏数组
         "no-sparse-arrays":2,
         // 避免意外的多行表达式
-        "no-unexpected-multiline":2,
+        // "no-unexpected-multiline":2,
         // 禁止不可达代码 比如，在return 之后还有执行代码
         "no-unreachable":2,
         // 在if中如果有return语句，那样else就是多余，可去掉 
-        "no-else-return":1,
+        // "no-else-return":1,
         // 不允许使用NaN来进行比较判断，判断是否为数字应该使用isNaN()
         "use-isnan":1,
         // 确保typeof的结果是与下面集合的元素进行比较
         // 【undefined, object, number, boolean, string, functdion, symbol】
         "valid-typeof":2,
         // 确保数组方法中有return语句
-        "array-callback-return":1,
+        "array-callback-return":0,
         // 最大的复杂度
-        "complexity": [1, { "max": 20 }],
+        // "complexity": [1, { "max": 20 }],
         // 确保所有的return语句返回指定的值；
-        "consistent-return":1,
+        // "consistent-return":0,
         // 不允许省略花括号
-        "curly":1,
+        "curly":2,
         // 确保有switch语句中有default-case
         "default-case":1,
         // 保持点操作符位置的一致性，链式编程时统一风格
         // "property":点操作符在行首 
         // "object": 点操作符在行末
-        "dot-location":[1, "property"],
+        "dot-location":[2, "property"],
         //强制使用三等号
         "eqeqeq":1,
         // 使用for in 循环时，如果没有对结果进行筛选（hasOwnProperty）,给出警告
@@ -72,7 +72,7 @@ module.exports = {
         "no-caller":1,
         // 禁止在case子句中进行声明
         "no-case-declarations":1,
-        // 禁止出现像除法的正则表达式
+        // 禁止出现像除法的正则表达式 
         "no-div-regex":1,
         // 禁止声明空函数
         "no-empty-function":2,
@@ -81,25 +81,25 @@ module.exports = {
         // 禁止在没有使用typeof的情况下与null进行比较，因为自动类型转换，undefined == null 为true
         "no-eq-null":1,
         // 不允许使用eval
-        "no-eval":1,
+        "no-eval":2,
         // 在无需使用this的函数体内使用bind,对性能会造成不必要的损耗
         "no-extra-bind":2,
         // 避免出现无意的缺少break的switch-case，可通过注释（// fallthrough）声明是有意为之
         "no-fallthrough":2,
         // 禁止数字字面量使用前置或末尾小数点
-        "no-floating-decimal":1,        
+        "no-floating-decimal":1,
         // 禁止在顶级做用域声明全局变更，全局变量要显式赋值给window或self，对于es6和amd,umd无效
         "no-implicit-globals":1,
         // setTimeout,setInterval第一个参数不允许使用可执行的js字符串，防止隐式eval
-        "no-implied-eval":1,
+        "no-implied-eval":2,
         // 禁止this关键字出现在类或者对象之外，该规则只在严格模式下生效，或者ESlint配置中设置sourceType:module
         "no-invalid-this":2,
         //禁用不必要的嵌套块, es6中let，const会有块级绑定
         "no-lone-blocks":2,
         // 禁止在循环中存在函数，读取外层变量
-        "no-loop-func":2,
+        "no-loop-func":1,
         // 代码中多次出现的无意义的数字常量，尽量用命名常量取代，让代码更为清晰，维护更方便；
-        "no-magic-numbers":[1,{"ignoreArrayIndexes":true, "enforceConst":true}],
+        "no-magic-numbers":[1, {"ignoreArrayIndexes":true, "enforceConst":true}],
         // 禁止使用多行字符串，可以用``代替
         "no-multi-str":2,
         // 禁止对原生对象进行赋值
@@ -109,9 +109,9 @@ module.exports = {
         // 禁止对Function使用new操作符
         "no-new-func":2,
         // 不建议使用原始类型如String，Boolean，Number等这些包装实例
-        "no-new-wrappers":1,
+        "no-new-wrappers":2,
         // 禁止对函数参数重新赋值,props为true时会对对象属性也进行只读检测
-        "no-param-reassign":[2, {"props":false}],
+        "no-param-reassign":[1, {"props":false}],
         // 禁止多次声明同一变量,"builtinGlobals": true时会检查关键字
         "no-redeclare":[2,{"builtinGlobals": true}],
         // 禁止无效的自我赋值
@@ -123,9 +123,9 @@ module.exports = {
         // 禁止不必要的call,apply,这两种方法效率太低
         "no-useless-call":1,
         // 禁止不必要的转义
-        "no-useless-escape":1,
+        "no-useless-escape":2,
         // 禁止无必要的字符拼接
-        "no-useless-concat":1,
+        "no-useless-concat":2, 
         // 建议使用parseInt的第二个参数
         // "as_need",只在需要时传入
         // "always", 默认值，总是需要传入
@@ -133,7 +133,7 @@ module.exports = {
         // 建议变量在其作用域前置
         "vars-on-top":1,
         // 常量必须写在前面，防止写少一个等号，这样会报错
-        "yoda":[2,"always"],
+        "yoda":[2, "always", { "onlyEquality" : true}],
         // 禁止声明无用的变量
         "no-unused-vars":1,
         // 禁止使用未声明变量
@@ -143,7 +143,7 @@ module.exports = {
      
 
         // 不允许使用console
-        "no-console":     [1, { "allow": ["warn", "log"] }],   
+        "no-console":[1, { "allow": ["warn", "log"] }],   
         // 使用alert, confirm, prompt等原生API时给出警告
         "no-alert": 1,
          // 验证JSDoc的正确性，因为js语法不检查注释的正确性；
