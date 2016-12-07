@@ -2,7 +2,7 @@
 * @Author: Roy
 * @Date:   2016-05-09 19:44:57
 * @Last Modified by:   RoyChen
-* @Last Modified time: 2016-11-30 12:19:45
+* @Last Modified time: 2016-12-07 16:15:39
 *
 * ESlint 代码格式规范
 */
@@ -51,7 +51,7 @@ module.exports = {
         // 属性引号必要一致，只在有需要的时候引入
         "quote-props": [1, "consistent-as-needed", {"keywords":true}],
         // 保持字符串风格一致，使用单引号
-        "quotes":[1, "double", "avoid-escape"],
+        "quotes":[1, "single", "avoid-escape"],
         // 注释后必须有一个或多个空格 // 或者 /*
         "spaced-comment": 1,
         // 正则要用括号包起来，避免看起来像除法运算符

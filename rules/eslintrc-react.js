@@ -54,8 +54,8 @@ module.exports = {
 		  "callbacksLast": false,
 		  "shorthandFirst":false
 		}],
-		// 只有no-unused-varas启用时，此项才有用；检测React是否有使用
-		"react/jsx-uses-react": [2, { "pragma": "React" }],
+		// 只有no-unused-varas启用时，此项才有用
+		"react/jsx-uses-react": 2,
 		// 阻止那些用在jsx标签中的变量被定义成未使用，同样只有no-unused-vars启用时才有效
 		"react/jsx-uses-vars": 2,
 		// 禁止使用危险的jsx属性，如：dangerouslySetInnerHTML
@@ -63,8 +63,8 @@ module.exports = {
 		// 禁止使用已经废弃的方法,带上react版本
 		"react/no-deprecated": [1, { "react": "15.0.1" }],
 		// 禁止在componentDidMount和componentDidUpdate方法中使用setState，这样会造成死循环，可以在事件注册的回调函数中使用
-		"react/no-did-mount-set-state": [2, "allow-in-func"],
-		"react/no-did-update-set-state": [2, "allow-in-func"],
+		"react/no-did-mount-set-state": 2,
+		"react/no-did-update-set-state": 2,
 		// 禁止直接对this.state进行赋值，只能通过setState
 		"react/no-direct-mutation-state": 1,
 		// 禁止使用isMounted方法，即将被官方抛弃
@@ -84,7 +84,7 @@ module.exports = {
 		// 2、有this.props和 this.context这两个属性之外的一些属性
 		// 3、jsx中有ref属性；
 		// 4、render方法返回jsx组件
-		"react/prefer-stateless-function": 2,
+		"react/prefer-stateless-function": 1,
 		// 阻止在JSX语法中没有引入React
 		"react/react-in-jsx-scope": 2,
 		// 在extensions数组中的后缀名的组件无须写上其扩展名
@@ -123,7 +123,7 @@ module.exports = {
 		  }
 		}],
 		// 多行元素需要用括号包起来（）
-		"react/wrap-multilines": [2, {
+		"react/jsx-wrap-multilines": [2, {
 		  "declaration": true,
 		  "assignment": true,
 		  "return": true
