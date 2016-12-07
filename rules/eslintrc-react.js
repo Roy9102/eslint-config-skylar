@@ -61,7 +61,7 @@ module.exports = {
 		// 禁止使用危险的jsx属性，如：dangerouslySetInnerHTML
 		"react/no-danger": 2,
 		// 禁止使用已经废弃的方法,带上react版本
-		"react/no-deprecated": [1, { "react": "15.0.1" }],
+		"react/no-deprecated": 1,
 		// 禁止在componentDidMount和componentDidUpdate方法中使用setState，这样会造成死循环，可以在事件注册的回调函数中使用
 		"react/no-did-mount-set-state": 2,
 		"react/no-did-update-set-state": 2,
